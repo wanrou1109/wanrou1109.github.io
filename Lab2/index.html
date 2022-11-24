@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<style>
+		#subtitle{
+			background-color: yellow;
+		}
+		special{
+			color:darkgreen;
+			font-weight: bold;
+		}
+		.extra special{
+			color:inherit;
+		}
+		body{
+			background: lightgoldenrodyellow;
+		}
+		h1{
+			color: maroon;
+			margin-left: 40px;
+			font-weight: 900;
+		}
+		p{
+			font-size: 15px;
+			font-family: arial, sans-serif;
+		}
+		li em{
+			font-weight: bold;
+			color: gray;
+			text-decoration: underline;
+		}
+		h3, em{
+			text-decoration: overline;
+		}
+	</style>
+</head>
+<body>
+	<h1>Feedback Form</h1>
+	<em>Hello!</em><br>
+	<li>Please fill out <em>this form</em> to help us improve our site.</li><br><br>
+	<form method="post" action="http://www.deitel.com">
+		<div>
+			#One. <special>Name:</special>
+		</div>
+		<label>
+			<input name="name" type="text" size="25" maxlength="30">
+		</label><br><br>
+
+		<div>
+			#Two. <special>Comments:</special>
+		</div>
+		<textarea rows="5" cols="50">
+Enter comments here!	
+		</textarea></th>
+		<br><br>
+
+		<div>
+			#Three. <special>E-mail Address:</special>
+		</div>
+		<label>
+			<input type="text" name="E-mail">
+		</label><br>
+
+		<p id="subtitle">Things you liked:</p>
+		<input type="checkbox" name="liked" value="site design">site design<input type="checkbox" name="liked" value="link">Links<input type="checkbox" name="liked" value="ease of use">ease of use<input type="checkbox" name="liked" value="image">Image<input type="checkbox" name="liked" value="source code">source code
+
+		<p id="subtitle">How did you get to our site?</p>
+		<input type="radio" name="how" value="search engine" checked>Search engine<input type="radio" name="how" value="Links from another site">Links from another site<input type="radio" name="how" value="Deitel.com Web site">Deitel.com Web site<input type="radio" name="how" value="Reference in a book">Reference in a book<input type="radio" name="how" value="other">Other<br><br>
+
+		<label>Rate our site:</label>
+			<select name="tend">
+				<option value="amazing" selected>amazing</option>
+				<option value="normal">normal</option>
+				<option value="poor">poor</option>
+			</select><br><br>
+
+		<input type="submit" name="Submit">
+		<input type="reset" name="Clear">
+
+		<h3>Thanks for <em>your</em> attendance!!</h3>
+
+	</form>
+
+</body>
+</html>
