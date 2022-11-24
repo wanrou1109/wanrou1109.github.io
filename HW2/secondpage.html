@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<style>
+		#Title{
+			color:maroon;
+			background-color:yellow ;
+			text-decoration: underline;
+			font-size: 30px;
+		}
+		heading{
+			color:rgb(165, 123, 32);
+			font-family: Georgia, 'Times New Roman', Times, serif;
+			font-weight: 600;
+		}
+		.extra heading{
+			color: inherit;
+		}
+		body{
+			background: lightyellow;
+		}
+		p{
+			color:blue;
+			font-size: 15px;
+			font-family: arial, sans-serif;
+		}
+		li em{
+			font-weight: bolder;
+			color: rgb(177, 97, 97);
+			text-decoration: underline;
+		}
+		h3, em{
+			color: green;
+			margin-left: 40px;
+			text-decoration: line-through;
+		}
+	</style>
+</head>
+<body>
+	<div id="Title">New HTML5 Input Types Demo</div>
+	<p>This form demonstrate the new HTML5 input types and placeholder, required and autofocus attributes.</p>
+
+	<div>#<heading>Color:</heading>(down to select)</div>
+		<input type="color" autofocus /> (Hexadecimal code such as #ADD8E6)<br><br>
+
+	<div>#<heading>Date:</heading>(down to select)</div>
+		<input type="date" name="date" placeholder="mm/dd/yyyy"> (yyyy/mm/dd)<br><br>
+
+	<div>#<heading>E-mail:</heading>(down to fill in)</div>
+		<input type="text" name="email" placeholder="name@domail.com"> (name@domain.com)<br><br>
+
+	<div>#<heading>Number:</heading>(down to select)</div>
+		<input type="number" name="quantity" min="0" max="7" value="4"> (Enter a number between 0 and 7)<br><br>
+
+	<div>#<heading>Range:</heading></div> <h3>Here!Fill in</h3> 
+		0<input type="range" name="vol" min="0" max="20">20<br><br>
+		<li>Remember: Max to <em>20</em> and min to <em>0</em></li>
+
+	<div>#<heading>Search:</heading>(down to fill in)</div>
+		<input type="search" name="Search" placeholder="search query"><br><br>
+
+	<div>#<heading>Time:</heading>(down to select)</div>
+		<input type="time" name="time"> (hh:mm)<br><br>
+
+	<input type="submit" name="submit">
+	<input type="reset" name="reset">
+
+</body>
+</html>
