@@ -1,0 +1,84 @@
+#subtitle{
+	background-color:  rgb(154, 117, 122);
+	color:white;
+	font-size: 30px;
+	font-weight: bold;
+ }
+special{
+	color:rgb(222, 197, 222);
+	font-weight: lighter;
+}
+.extra special{
+	color:inherit;
+}
+body{
+  background-color: rgb(177, 176, 196);
+}
+h1{
+	color: white;
+	margin-left: 40px;
+	font-weight: 900;
+	background-color:rgb(121, 89, 94);
+}
+h2, em{
+	color:rgb(58, 62, 72);
+}
+p{
+	font-size: 15px;
+	font-family: arial, sans-serif;
+	color: white;
+}
+h3{
+	font-size: 20px;
+	color: white;
+	background-color: rgb(138, 155, 180);
+}
+em{
+	color:antiquewhite;
+	font-size: medium;
+	text-decoration:dashed;
+}
+li em{
+	font-weight: bold;
+	color: black;
+	text-decoration: underline;
+}
+nav{
+	font-weight: bold;
+	color: white;
+	border: 2px solid black;
+  text-align: center;
+	width: 20em;
+	background-color: black;
+}
+nav ul{
+	display: none;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+nav:hover ul{
+	display: block;
+}
+nav ul li{
+	border-top: 2px solid black;
+	background-color: rgb(185, 185, 136);
+  width: 20em;
+	color:rgb(142, 142, 169);
+}
+nav ul li:hover{ 
+	background-color: white;}
+	a	{ text-decoration: none; }
+	p.double{ border-style: double; }
+.footer{
+	padding: 30px;
+	text-align: center;
+	background-color: #ddd;
+}
+@media  screen and (min-width:480px) {
+	body{
+		background-color: black;
+  }
+}
+		
+		
