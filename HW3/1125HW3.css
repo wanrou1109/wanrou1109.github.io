@@ -16,7 +16,12 @@
 	float: left;
 	margin-left: auto;
 }
-p, li{
+p{
 	font-family: sans-serif;
 	margin-left: auto;
+}
+@media  screen and (min-width:480px) {
+	body{
+		background-color: rgb(204, 194, 194);
+	}
 }
