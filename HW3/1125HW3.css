@@ -1,0 +1,22 @@
+#title{
+	background-color: rgb(154, 117, 122);
+	color:white;
+	font-weight: bolder;
+}
+.subtitle{
+	background-color: rgb(222, 197, 222);
+	color:white;
+	font-weight: bold;
+}
+.right{
+	float:right;
+	margin-right: auto;
+}
+.left{
+	float: left;
+	margin-left: auto;
+}
+p, li{
+	font-family: sans-serif;
+	margin-left: auto;
+}
