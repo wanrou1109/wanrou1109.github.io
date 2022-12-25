@@ -59,40 +59,44 @@
 		}
 		window.addEventListener("load", start, false);
 
-		//count the frequency
-		while(dieValue == 1){
-			var frequency1=0;
-			frequency1++;
-		}
-		while(dieValue == 2){
-			var frequency2=0;
-			frequency2++;
-		}
-		while(dieValue == 3){
-			var frequency3=0;
-			frequency3++;
-		}
-		while(dieValue == 4){
-			var frequency4=0;
-			frequency4++;
-		}
-		while(dieValue == 5){
-			var frequency5=0;
-			frequency5++;
-		}
-		while(dieValue == 6){
-			var frequency6=0;
-			frequency6++;
+		function addChart(){
+			//count the frequency
+			while(dieValue == 1){
+				var frequency1=parseInt(0);
+				frequency1++;
+			}
+			while(dieValue == 2){
+				var frequency2=parseInt(0);
+				frequency2++;
+			}
+			while(dieValue == 3){
+				var frequency3=parseInt(0);
+				frequency3++;
+			}
+			while(dieValue == 4){
+				var frequency4=parseInt(0);
+				frequency4++;
+			}
+			while(dieValue == 5){
+				var frequency5=parseInt(0);
+				frequency5++;
+			}
+			while(dieValue == 6){
+				var frequency6=parseInt(0);
+				frequency6++;
+			}
+
+			//accumulate percent
+			var total = frequency1+frequency2+frequency3+frequency4+frequency5+frequency6;
+			var percent1 = frequency1/total;
+			var percent2 = frequency2/total;
+			var percent3 = frequency3/total;
+			var percent4 = frequency4/total;
+			var percent5 = frequency5/total;
+			var percent6 = frequency6/total;
 		}
 
-		//accumulate percent
-		var total = frequency1+frequency2+frequency3+frequency4+frequency5+frequency6;
-		var percent1 = frequency1/total;
-		var percent2 = frequency2/total;
-		var percent3 = frequency3/total;
-		var percent4 = frequency4/total;
-		var percent5 = frequency5/total;
-		var percent6 = frequency6/total;
+		
 	</script>
 
 	<form action = "#">
@@ -104,12 +108,12 @@
 		<img id="die4" src="die4.png" alt="blank image">
 		<img id="die5" src="die5.png" alt="blank image">
 		<img id="die6" src="die6.png" alt="blank image">
-		<img id="die7" src="die7.png" alt="blank image">
-		<img id="die8" src="die8.png" alt="blank image">
-		<img id="die9" src="die9.png" alt="blank image">
-		<img id="die10" src="die10.png" alt="blank image">
-		<img id="die11" src="die11.png" alt="blank image">
-		<img id="die12" src="die12.png" alt="blank image">
+		<img id="die7" src="die1.png" alt="blank image">
+		<img id="die8" src="die2.png" alt="blank image">
+		<img id="die9" src="die3.png" alt="blank image">
+		<img id="die10" src="die4.png" alt="blank image">
+		<img id="die11" src="die5.png" alt="blank image">
+		<img id="die12" src="die6.png" alt="blank image">
 
 		<table>
 			<tr>
@@ -119,7 +123,7 @@
 			</tr>
 			<tr>
 				<td>1</td>
-				<td>frequency1</td>
+				<td><input id="frequency1"></td>
 				<td>percent1</td>
 			</tr>
 			<tr>
