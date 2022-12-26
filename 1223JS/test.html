@@ -37,6 +37,21 @@
 			die12Image = document.getElementById("die12");
 		}
 
+		function rollDice(){
+			setImage(die1Image);
+			setImage(die2Image);
+			setImage(die3Image);
+			setImage(die4Image);
+			setImage(die5Image);
+			setImage(die6Image);
+			setImage(die7Image);
+			setImage(die8Image);
+			setImage(die9Image);
+			setImage(die10Image);
+			setImage(die11Image);
+			setImage(die12Image);
+		}
+
 		function setImage(dieImg){
 			var dieValue = Math.floor(1+Math.random()*6);
 			dieImg.setAttribute("src", "die"+dieValue+".png");
@@ -71,13 +86,13 @@
 			}
 
 			//accumulate percent
-			var total = frequency1+frequency2+frequency3+frequency4+frequency5+frequency6;
-			var percent1 = frequency1/total;
-			var percent2 = frequency2/total;
-			var percent3 = frequency3/total;
-			var percent4 = frequency4/total;
-			var percent5 = frequency5/total;
-			var percent6 = frequency6/total;
+			var total = parseInt(frequency1+frequency2+frequency3+frequency4+frequency5+frequency6);
+			var percent1 = parseInt(frequency1/total);
+			var percent2 = parseInt(frequency2/total);
+			var percent3 = parseInt(frequency3/total);
+			var percent4 = parseInt(frequency4/total);
+			var percent5 = parseInt(frequency5/total);
+			var percent6 = parseInt(frequency6/total);
 
 			updateFreequencyTable();
 		}
@@ -99,7 +114,7 @@
 		}
 	</script>
 
-	<!--
+	
 	<p><img id = "die1" src = "die1.png" alt = "die 1 image">
 	   <img id = "die2" src = "die1.png" alt = "die 2 image">
 	   <img id = "die3" src = "die1.png" alt = "die 3 image">
@@ -112,7 +127,7 @@
 	   <img id = "die10" src = "die1.png" alt = "die 10 image">
 	   <img id = "die11" src = "die1.png" alt = "die 11 image">
 	   <img id = "die12" src = "die1.png" alt = "die 12 image"></p>
-	-->
+	
 
 	<form action = "#">
 		<input id="rollButton" type="button" value="Roll Dice">
