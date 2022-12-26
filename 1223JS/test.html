@@ -40,11 +40,13 @@
 		function rollDice(){
 			var face;
 
-			for(var i = 1; i <= 12; ++i){
-				face = Math.floor(1+Math.random()*6);
-				setImage(i,face);
+			for(var i = 1; i <= 2; ++i){
+				for(var j = 1; j <= 6; ++j){
+					face = Math.floor(1+Math.random()*6);
+				setImage(j,face);
 				tallyRolls(face);
 				++totalDice;
+				}
 			}
 
 			updateFreequencyTable();
@@ -68,24 +70,6 @@
 					++frequency5;
 					break;
 				case 6:
-					++frequency6;
-					break;
-				case 7:
-					++frequency1;
-					break;
-				case 8:
-					++frequency2;
-					break;
-				case 9:
-					++frequency3;
-					break;
-				case 10:
-					++frequency4;
-					break;
-				case 11:
-					++frequency5;
-					break;
-				case 12:
 					++frequency6;
 					break;
 			}
