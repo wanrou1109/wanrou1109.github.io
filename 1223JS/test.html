@@ -37,55 +37,63 @@
 			die12Image = document.getElementById("die12");
 		}
 
-		function rollDice(){
-			var face;
+		function setImage(dieImg){
+			var dieValue = Math.floor(1+Math.random()*6);
+			dieImg.setAttribute("src", "die"+dieValue+".png");
+			dieImg.setAttribute("alt", "die image with "+dieValue+".spot(s)");
+		}
 
-			for(var i = 1; i <= 2; ++i){
-				for(var j = 1; j <= 6; ++j){
-					face = Math.floor(1+Math.random()*6);
-				setImage(j,face);
-				tallyRolls(face);
-				++totalDice;
-				}
+			function addChart(){
+			//count the frequency
+			while(dieValue == 1){
+				var frequency1=parseInt(0);
+				frequency1++;
 			}
+			while(dieValue == 2){
+				var frequency2=parseInt(0);
+				frequency2++;
+			}
+			while(dieValue == 3){
+				var frequency3=parseInt(0);
+				frequency3++;
+			}
+			while(dieValue == 4){
+				var frequency4=parseInt(0);
+				frequency4++;
+			}
+			while(dieValue == 5){
+				var frequency5=parseInt(0);
+				frequency5++;
+			}
+			while(dieValue == 6){
+				var frequency6=parseInt(0);
+				frequency6++;
+			}
+
+			//accumulate percent
+			var total = frequency1+frequency2+frequency3+frequency4+frequency5+frequency6;
+			var percent1 = frequency1/total;
+			var percent2 = frequency2/total;
+			var percent3 = frequency3/total;
+			var percent4 = frequency4/total;
+			var percent5 = frequency5/total;
+			var percent6 = frequency6/total;
 
 			updateFreequencyTable();
 		}
 
-		function tallRolls(face){
-			switch(face){
-				case 1:
-					++frequency1;
-					break;
-				case 2:
-					++frequency2;
-					break;
-				case 3:
-					++frequency3;
-					break;
-				case 4:
-					++frequency4;
-					break;
-				case 5:
-					++frequency5;
-					break;
-				case 6:
-					++frequency6;
-					break;
-			}
-		}
 
 		function updateFrequencyTable(){
 			var tableDiv = document.getElementById("frequencyTableDiv");
 
 			table.innerHTML = "<table>" + 
 			"<caption>Die Rolling Frequencies</caption>" + "<thead><th>Face</th><th>Frequency</th>" + "<th>Precent</th></thead>" + 
-			"<tbody><tr> <td>1</td> <td>"+frequency1+"</td> <td>"+Math.floor((frequency1/totalDice)*100)+"%"+"</td> </tr>" +
-					"<tr> <td>2</td> <td>"+frequency2+"</td> <td>"+Math.floor((frequency2/totalDice)*100)+"%"+"</td> </tr>" +
-					"<tr> <td>3</td> <td>"+frequency3+"</td> <td>"+Math.floor((frequency3/totalDice)*100)+"%"+"</td> </tr>" +
-					"<tr> <td>4</td> <td>"+frequency4+"</td> <td>"+Math.floor((frequency4/totalDice)*100)+"%"+"</td> </tr>" +
-					"<tr> <td>5</td> <td>"+frequency5+"</td> <td>"+Math.floor((frequency5/totalDice)*100)+"%"+"</td> </tr>" +
-					"<tr> <td>6</td> <td>"+frequency6+"</td> <td>"+Math.floor((frequency6/totalDice)*100)+"%"+"</td> </tr>" +
+			"<tbody><tr> <td>1</td> <td>"+frequency1+"</td> <td>"+percent1+"%"+"</td> </tr>" +
+					"<tr> <td>2</td> <td>"+frequency2+"</td> <td>"+percent2+"%"+"</td> </tr>" +
+					"<tr> <td>3</td> <td>"+frequency3+"</td> <td>"+percent3+"%"+"</td> </tr>" +
+					"<tr> <td>4</td> <td>"+frequency4+"</td> <td>"+percent4+"%"+"</td> </tr>" +
+					"<tr> <td>5</td> <td>"+frequency5+"</td> <td>"+percent5+"%"+"</td> </tr>" +
+					"<tr> <td>6</td> <td>"+frequency6+"</td> <td>"+percent6+"%"+"</td> </tr>" +
 					"</tbody></table>";
 
 		}
